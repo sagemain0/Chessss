@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ChessLogic
+﻿namespace ChessLogic
 {
     public class Queen : Piece
     {
-
-        public override PieceType Type => PieceType.Bishop;
+        public override PieceType Type => PieceType.Queen;
         public override Player Color { get; }
 
         public Queen(Player color)
@@ -19,8 +12,10 @@ namespace ChessLogic
 
         public override Piece Copy()
         {
-            Queen copy = new Queen(Color);
-            copy.HasMoved = HasMoved;
+            Queen copy = new Queen(Color)
+            {
+                HasMoved = this.HasMoved
+            };
             return copy;
         }
     }

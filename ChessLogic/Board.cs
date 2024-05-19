@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ChessLogic
 {
@@ -43,7 +39,7 @@ namespace ChessLogic
             this[7, 1] = new Knight(Player.White);
             this[7, 2] = new Bishop(Player.White);
             this[7, 3] = new Queen(Player.White);
-            this[7, 4] = new Knight(Player.White);
+            this[7, 4] = new King(Player.White);
             this[7, 5] = new Bishop(Player.White);
             this[7, 6] = new Knight(Player.White);
             this[7, 7] = new Rook(Player.White);
@@ -51,7 +47,7 @@ namespace ChessLogic
             for (int c = 0; c < 8; c++)
             {
                 this[1, c] = new Pawn(Player.Black);
-                this[0, c] = new Pawn(Player.White);
+                this[6, c] = new Pawn(Player.White);
             }
         }
 
